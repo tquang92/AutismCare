@@ -7,7 +7,7 @@ const Tab = createBottomTabNavigator();
 
 const HomeTab = () => {
   return (
-   <Tab.Navigator>
+   <Tab.Navigator screenOptions={{headerShown: false}}>
     <Tab.Screen name='Home' component={Chat} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Entypo name="home" size={size} color={color} />}}/>
    </Tab.Navigator>
   )

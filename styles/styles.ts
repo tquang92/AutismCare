@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native"
 
 export const STYLES = StyleSheet.create({
     title: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: "700",
         color: "#FFF",
     },
