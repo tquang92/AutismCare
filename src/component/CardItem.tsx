@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import { STYLES } from "../../styles/styles";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 export interface CardItemProps extends TouchableOpacityProps {
   image: any;
@@ -23,7 +23,9 @@ const CardItem = (props: CardItemProps) => {
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate("Detail");
+        navigation.navigate("Detail",{
+          ...props
+        });
       }}
       style={[
         STYLES.cardItem,

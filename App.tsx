@@ -14,7 +14,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
-        <Stack.Screen name="Chat" component={HomeTab} />
+        <Stack.Screen name="HomeTab" component={HomeTab} />
         <Stack.Screen name="Detail" component={Detail} />
 
       </Stack.Navigator>

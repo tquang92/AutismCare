@@ -70,7 +70,7 @@ const Login = () => {
           <TouchableOpacity
             style={styles.login}
             onPress={() => {
-              navigation.navigate("Chat");
+              navigation.navigate("HomeTab");
             }}
           >
             <Text style={styles.label}>Đăng nhập</Text>
