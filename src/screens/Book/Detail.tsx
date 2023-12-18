@@ -3,8 +3,8 @@ import React from 'react'
 import { useRoute } from '@react-navigation/native'
 
 const Detail = () => {
-  const route = useRoute();
-  const { name, image}: any= route.params;
+  const route = useRoute<any>();
+  const {name , image} = route.params;
   return (
     <SafeAreaView>
       <Text>{name}</Text>

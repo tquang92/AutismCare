@@ -1,9 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "./src/screens/Login";
 import Signup from "./src/screens/Signup";
-import Chat from "./src/screens/Chat";
+import Chat from "./src/screens/Book/Chat";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Detail from "./src/screens/Detail";
+import Detail from "./src/screens/Book/Detail";
 import HomeTab from "./src/navigations/HomeTab";
 
 const Stack = createNativeStackNavigator();
