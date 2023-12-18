@@ -9,13 +9,9 @@ import {
 import React from "react";
 import { STYLES } from "../../styles/styles";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { CardItemProps } from "../types/data";
 
-export interface CardItemProps extends TouchableOpacityProps {
-  image: any;
-  name: string;
-  specialist: string;
-  booking: string;
-}
+
 
 const CardItem = (props: CardItemProps) => {
   const navigation = useNavigation<any>();

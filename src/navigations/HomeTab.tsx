@@ -12,7 +12,9 @@ const Tab = createBottomTabNavigator();
 
 const HomeTab = (): JSX.Element => {
   return (
-   <Tab.Navigator>
+   <Tab.Navigator screenOptions={{
+    headerShown: false,
+   }}>
     <Tab.Screen name='Home' component={Home} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="home" size={size} color={color} />}}/>
     <Tab.Screen name='Chat' component={Chat} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="calendar" size={size} color={color} />}}/>
     <Tab.Screen name='Music' component={Music} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="music" size={size} color={color} />}}/>

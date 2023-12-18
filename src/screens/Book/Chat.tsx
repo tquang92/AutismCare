@@ -14,6 +14,8 @@ import { STYLES } from "../../../styles/styles";
 import CardItem from "../../component/CardItem";
 import { nurses } from "../../data/items";
 import Header from "../../component/Header";
+import { Key } from "react";
+import { CardItemProps } from "../../types/data";
 
 const coolGray = "#374151";
 

@@ -5,11 +5,13 @@ import Chat from "./src/screens/Book/Chat";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Detail from "./src/screens/Book/Detail";
 import HomeTab from "./src/navigations/HomeTab";
+import { Provider } from "./src/config/context";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    <Provider>
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
@@ -19,5 +21,6 @@ export default function App() {
 
       </Stack.Navigator>
     </NavigationContainer>
+    </Provider>
   );
 }
