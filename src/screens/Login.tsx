@@ -8,6 +8,8 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { useContext, useState } from "react";
+import { Context } from "../config/context";
 
 const lightBlue = "#76CFF1";
 const white = "#FFFFFF";
@@ -16,7 +18,23 @@ const lightGray = "#9CA3AF";
 const gray = "#6B7280";
 
 const Login = () => {
+  const {user, setUser} = useContext(Context);
+  const [formState, setFormState] = useState({
+    phoneNum: "",
+    password: "",
+  })
+  const onFormStateChange = <T = any>(key: string, value: T) => {
+    setFormState(prevState=>({
+      ...prevState,
+      [key]: value
+    }))
+  }
   const navigation = useNavigation<any>();
+  const logInHandler = ()=>{
+    console.log(formState);
+    setUser(formState);
+    // navigation.replace("HomeTab");
+  }
   return (
     <View style={styles.container}>
       <View>
@@ -44,6 +62,10 @@ const Login = () => {
               style={[styles.tinput, { marginTop: 5, marginBottom: 15 }]}
               placeholder="Số điện thoại"
               placeholderTextColor={lightGray}
+              value={formState.phoneNum}
+              onChangeText={(text: string)=>{
+                onFormStateChange("phoneNum", text);
+              }}
             />
             <Text style={[styles.label, { color: lightBlue }]}>Mật khẩu</Text>
             <TextInput
@@ -51,6 +73,10 @@ const Login = () => {
               style={[styles.tinput, { marginTop: 5 }]}
               placeholder="Mật khẩu"
               placeholderTextColor={lightGray}
+              value={formState.password}
+              onChangeText={(text: string)=>{
+                onFormStateChange("password", text);
+              }}
             />
           </View>
           <TouchableOpacity style={{ marginTop: 10 }}>
@@ -69,9 +95,7 @@ const Login = () => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.login}
-            onPress={() => {
-              navigation.navigate("HomeTab");
-            }}
+            onPress={logInHandler}
           >
             <Text style={styles.label}>Đăng nhập</Text>
           </TouchableOpacity>
