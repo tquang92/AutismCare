@@ -5,7 +5,7 @@ import Chat from "./src/screens/Book/Chat";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Detail from "./src/screens/Book/Detail";
 import HomeTab from "./src/navigations/HomeTab";
-import { Provider } from "./src/config/context";
+import { ContextProvider } from "./src/config/context";
 import BookOverView from "./src/screens/Book/BookOverView";
 import { Stack } from "./src/data/items";
 import BookHistory from "./src/screens/Book/BookHistory";
@@ -13,7 +13,7 @@ import BookHistory from "./src/screens/Book/BookHistory";
 
 export default function App() {
   return (
-    <Provider>
+    <ContextProvider>
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
@@ -25,6 +25,6 @@ export default function App() {
 
       </Stack.Navigator>
     </NavigationContainer>
-    </Provider>
+    </ContextProvider>
   );
 }
