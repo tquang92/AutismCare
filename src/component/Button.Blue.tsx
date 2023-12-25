@@ -1,5 +1,9 @@
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import { Button, StyleSheet, Text, TouchableOpacity, TouchableOpacityProps, View } from "react-native";
+import React, { PropsWithChildren } from "react";
+
+type BtnProps = {
+  text: string
+} & TouchableOpacityProps
 
 export const BlueButton = (props: any) => {
   return (
@@ -12,13 +16,15 @@ export const BlueButton = (props: any) => {
 const styles = StyleSheet.create({
   blueButton: {
     backgroundColor: "#76CFF1",
-    justifyContent: 'center',
-    alignItems: 'center',
-    width:331,
+    width:343,
+    height:'auto',
     borderRadius: 100,
     paddingHorizontal: 12,
     paddingVertical: 10,
-    flex: 1,
+    justifyContent:'center',
+    alignItems:'center',
+    alignSelf: "center",
+    marginBottom:10
   },
   textButton: {
     color: '#1F2937',

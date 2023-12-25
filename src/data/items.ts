@@ -1,4 +1,8 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { CardItemProps } from "../types/data";
+
+export const Stack = createNativeStackNavigator();
+
 
 export const nurses: CardItemProps[] = [
     {

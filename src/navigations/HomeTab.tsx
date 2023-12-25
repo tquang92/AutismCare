@@ -7,6 +7,7 @@ import Home from '../screens/Home';
 import Music from '../screens/Music';
 import History from '../screens/History';
 import Notification from '../screens/Notification';
+import BookStack from './BookStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +17,7 @@ const HomeTab = (): JSX.Element => {
     headerShown: false,
    }}>
     <Tab.Screen name='Home' component={Home} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="home" size={size} color={color} />}}/>
-    <Tab.Screen name='Chat' component={Chat} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="calendar" size={size} color={color} />}}/>
+    <Tab.Screen name='BookStack' component={BookStack} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="calendar" size={size} color={color} />}}/>
     <Tab.Screen name='Music' component={Music} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="music" size={size} color={color} />}}/>
     <Tab.Screen name='History' component={History} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="clock" size={size} color={color} />}}/>
     <Tab.Screen name='Notification' component={Notification} options={{tabBarLabel:"",tabBarIcon: ({color, size})=><Feather name="bell" size={size} color={color} />}}/>

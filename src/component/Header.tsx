@@ -16,5 +16,9 @@ const styles = StyleSheet.create({heading: {
     fontSize: 17,
     fontWeight: "600",
     padding: 11,
+    alignItems:'flex-start',
+    flexShrink:0,
+    alignSelf:'center'
+    
 
 }})

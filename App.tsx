@@ -6,8 +6,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Detail from "./src/screens/Book/Detail";
 import HomeTab from "./src/navigations/HomeTab";
 import { Provider } from "./src/config/context";
+import BookOverView from "./src/screens/Book/BookOverView";
+import { Stack } from "./src/data/items";
+import BookHistory from "./src/screens/Book/BookHistory";
 
-const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="HomeTab" component={HomeTab} />
         <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="BookOverView" component={BookOverView} />
+        <Stack.Screen name="BookHistory" component={BookHistory}/>
 
       </Stack.Navigator>
     </NavigationContainer>
