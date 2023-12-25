@@ -3,14 +3,7 @@ import React from 'react'
 
 export const BlueButton = (props: any) => {
   return (
-      <TouchableOpacity style={styles.blueButton}><Text style={styles.textButton}>{props.button}</Text></TouchableOpacity>
-  )
-}
-export const TextButton = (props: any) => {
-  return (
-    <View>
-      <Text style={styles.textButton}>{props.text}</Text>
-    </View>
+      <TouchableOpacity style={styles.blueButton}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
   )
 }
 
@@ -18,10 +11,10 @@ export const TextButton = (props: any) => {
 
 const styles = StyleSheet.create({
   blueButton: {
-    color: "#76CFF1",
+    backgroundColor: "#76CFF1",
     justifyContent: 'center',
     alignItems: 'center',
-    height: 21,
+    width:331,
     borderRadius: 100,
     paddingHorizontal: 12,
     paddingVertical: 10,
