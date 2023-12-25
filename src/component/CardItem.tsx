@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { STYLES } from "../../styles/styles";
+import { STYLES } from "../styles/styles";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { CardItemProps } from "../types/data";
 

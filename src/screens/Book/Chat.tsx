@@ -10,7 +10,7 @@ import {
   SafeAreaView,
   ScrollView,
 } from "react-native";
-import { STYLES } from "../../../styles/styles";
+import { STYLES } from "../../styles/styles";
 import CardItem from "../../component/CardItem";
 import { nurses } from "../../data/items";
 import Header from "../../component/Header";
