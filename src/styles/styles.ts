@@ -17,5 +17,15 @@ export const STYLES = StyleSheet.create({
         width: 64,
         height: 64,
         borderRadius: 999,
+    },
+    headline: { 
+        fontSize: 16,
+        fontWeight:"700",
+        paddingLeft:16
+    },
+    word: {
+        fontSize: 14,
+        fontWeight: "400",
+
     }
 })
