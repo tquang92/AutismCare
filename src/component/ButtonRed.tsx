@@ -16,10 +16,10 @@ export const RedButton = (props: any) => {
 const styles = StyleSheet.create({
   redButton: {
     backgroundColor: "#EF4444",
-    width:343,
+    width:167,
     height:'auto',
     borderRadius: 100,
-    paddingHorizontal: 12,
+    paddingLeft:16,
     paddingVertical: 10,
     justifyContent:'center',
     alignItems:'center',
