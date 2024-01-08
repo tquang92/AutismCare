@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Stack } from "../data/items";
-import BookOverView from "../screens/Book/BookOverView";
 import Chat from "../screens/Book/Chat";
+import BookHistory from "../screens/Book/BookHistory";
 
 const BookStack = () => {
   return (
@@ -11,7 +11,7 @@ const BookStack = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="BookOverView" component={BookOverView}></Stack.Screen>
+      <Stack.Screen name="BookHistory" component={BookHistory}></Stack.Screen>
       <Stack.Screen name="Chat" component={Chat}></Stack.Screen>
     </Stack.Navigator>
   );

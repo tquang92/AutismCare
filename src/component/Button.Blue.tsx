@@ -5,9 +5,9 @@ type BtnProps = {
   text: string
 } & TouchableOpacityProps
 
-export const BlueButton = (props: any) => {
+export const BlueButton = (props: BtnProps) => {
   return (
-      <TouchableOpacity style={styles.blueButton}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.blueButton} {...props}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
   )
 }
 
