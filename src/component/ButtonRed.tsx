@@ -5,17 +5,17 @@ type BtnProps = {
   text: string
 } & TouchableOpacityProps
 
-export const BlueButton = (props: any) => {
+export const RedButton = (props: any) => {
   return (
-      <TouchableOpacity style={styles.blueButton}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.redButton}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
   )
 }
 
-// export default {BlueButton, TextButton};
+;
 
 const styles = StyleSheet.create({
-  blueButton: {
-    backgroundColor: "#76CFF1",
+  redButton: {
+    backgroundColor: "#EF4444",
     width:343,
     height:'auto',
     borderRadius: 100,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginBottom:10
   },
   textButton: {
-    color: '#1F2937',
+    color: 'white',
     fontSize: 14,
     fontWeight: '500'
   }

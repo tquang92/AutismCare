@@ -4,6 +4,7 @@ import Header from "../../component/Header";
 import { STYLES } from "../../styles/styles";
 import { BlueButton } from "../../component/Button.Blue";
 import { useNavigation } from "@react-navigation/native";
+import { RedButton } from "../../component/ButtonRed";
 
 const BookHistory = () => {
   const navigation = useNavigation<any>();
