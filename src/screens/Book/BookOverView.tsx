@@ -1,38 +1,51 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Header from "../../component/Header";
 import { STYLES } from "../../styles/styles";
 import { BlueButton } from "../../component/Button.Blue";
 import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from '@expo/vector-icons';
 
 const BookOverView = () => {
   const navigation = useNavigation<any>();
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header text="Hẹn tư vấn từ xa" />
-      <Text style={[STYLES.title, { marginTop: 15, marginBottom: 10 }]}>
-        Gặp các bác sĩ của chúng tôi
+      <Text style={[STYLES.title, { marginTop: 15, marginBottom: 10, paddingLeft: 16 }]}>
+        Lịch hẹn của bạn
       </Text>
       <Text
         style={[
           STYLES.title,
           {
             fontSize: 12,
-            fontWeight: "400",
             marginBottom: 25,
             color: "#9CA3AF",
+            flex:1,
+            paddingLeft: 16
           },
         ]}
       >
         Ngày giờ hiển thị theo giờ Việt Nam (BMT+7:00)
       </Text>
+      <Ionicons style={styles.icon} name="calendar-outline" size={96} color="#6B7280" />
+      <Text style={[STYLES.word, 
+        {
+          alignSelf:'center',
+          flex:1,
+          marginBottom: 25,
+          color: "#D1D5DB",
+        }
+        ]}
+        >
+          Không có lịch hẹn sắp tới</Text>
       <BlueButton
         text="+ Đặt lịch hẹn tư vấn từ xa"
         onPress={() => {
           navigation.navigate("Chat");
         }}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -46,5 +59,10 @@ const styles = StyleSheet.create({
   },
   content:{
     flex: 1
+  }, 
+  icon: {
+    alignSelf:'center',
+    marginBottom: 14
+    
   }
 })

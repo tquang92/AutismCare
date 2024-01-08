@@ -18,7 +18,7 @@ const styles = StyleSheet.create({heading: {
     padding: 11,
     alignItems:'flex-start',
     flexShrink:0,
-    alignSelf:'center'
+    alignSelf:'center',
     
 
 }})
