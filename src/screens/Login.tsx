@@ -31,7 +31,7 @@ const Login = () => {
   }
   const navigation = useNavigation<any>();
   const logInHandler = ()=>{
-    console.log(formState);
+    if(formState.password&&formState.phoneNum)
     setUser(formState);
     // navigation.replace("HomeTab");
   }
