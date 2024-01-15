@@ -5,6 +5,7 @@ export const STYLES = StyleSheet.create({
         fontSize: 20,
         fontWeight: "700",
         color: "#FFF",
+        paddingLeft:16
     },
     cardItem: {
         backgroundColor: "#6B7280",
@@ -26,6 +27,7 @@ export const STYLES = StyleSheet.create({
     word: {
         fontSize: 14,
         fontWeight: "400",
+        paddingLeft:16
 
     }
 })

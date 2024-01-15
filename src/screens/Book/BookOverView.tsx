@@ -21,7 +21,7 @@ const BookOverView = () => {
             fontSize: 12,
             marginBottom: 25,
             color: "#9CA3AF",
-            flex:1,
+            flex: 1,
             paddingLeft: 16
           },
         ]}
@@ -29,22 +29,25 @@ const BookOverView = () => {
         Ngày giờ hiển thị theo giờ Việt Nam (BMT+7:00)
       </Text>
       <Ionicons style={styles.icon} name="calendar-outline" size={96} color="#6B7280" />
-      <Text style={[STYLES.word, 
-        {
-          alignSelf:'center',
-          flex:1,
-          marginBottom: 25,
-          color: "#D1D5DB",
-        }
-        ]}
-        >
-          Không có lịch hẹn sắp tới</Text>
-      <BlueButton
-        text="+ Đặt lịch hẹn tư vấn từ xa"
-        onPress={() => {
-          navigation.navigate("Chat");
-        }}
-      />
+      <Text style={[STYLES.word,
+      {
+        alignSelf: 'center',
+        flex: 1,
+        marginBottom: 25,
+        color: "#D1D5DB",
+      }
+      ]}
+      >
+        Không có lịch hẹn sắp tới</Text>
+      <View style={{ width: "100%", height: 41, }}>
+
+        <BlueButton
+          text="+ Đặt lịch hẹn tư vấn từ xa"
+          onPress={() => {
+            navigation.navigate("Chat");
+          }}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -55,14 +58,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#374151',
-
   },
-  content:{
+  content: {
     flex: 1
-  }, 
+  },
   icon: {
-    alignSelf:'center',
+    alignSelf: 'center',
     marginBottom: 14
-    
+
   }
 })

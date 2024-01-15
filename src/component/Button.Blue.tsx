@@ -2,12 +2,13 @@ import { Button, StyleSheet, Text, TouchableOpacity, TouchableOpacityProps, View
 import React, { PropsWithChildren } from "react";
 
 type BtnProps = {
-  text: string
+  text: string,
+  width?: number,
 } & TouchableOpacityProps
 
 export const BlueButton = (props: BtnProps) => {
   return (
-      <TouchableOpacity style={styles.blueButton} {...props}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
+      <TouchableOpacity style={[styles.blueButton,{width: props.width?`${props.width}%`:"100%"}] } {...props}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
   )
 }
 
@@ -16,15 +17,16 @@ export const BlueButton = (props: BtnProps) => {
 const styles = StyleSheet.create({
   blueButton: {
     backgroundColor: "#76CFF1",
-    width:343,
-    height:'auto',
+    flex:1,
+    height:41,
     borderRadius: 100,
     paddingHorizontal: 12,
     paddingVertical: 10,
     justifyContent:'center',
     alignItems:'center',
     alignSelf: "center",
-    marginBottom:10
+    marginBottom:10,
+    marginLeft:12
   },
   textButton: {
     color: '#1F2937',

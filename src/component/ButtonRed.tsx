@@ -5,7 +5,7 @@ type BtnProps = {
   text: string
 } & TouchableOpacityProps
 
-export const RedButton = (props: any) => {
+export const RedButton = (props: BtnProps) => {
   return (
       <TouchableOpacity style={styles.redButton}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
   )
@@ -16,8 +16,8 @@ export const RedButton = (props: any) => {
 const styles = StyleSheet.create({
   redButton: {
     backgroundColor: "#EF4444",
-    width:167,
-    height:'auto',
+    width:180,
+    height:41,
     borderRadius: 100,
     paddingLeft:16,
     paddingVertical: 10,
