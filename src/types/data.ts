@@ -7,5 +7,6 @@ export interface CardItemProps extends TouchableOpacityProps {
     booking: string;
     edu: string;
     degree: string;
+    nurseId: string;
     exp: string;
   }
