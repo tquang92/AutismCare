@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   blueButton: {
     backgroundColor: "#76CFF1",
     flex:1,
-    height:41,
+    height:'auto',
     borderRadius: 100,
     paddingHorizontal: 12,
     paddingVertical: 10,

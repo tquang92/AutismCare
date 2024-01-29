@@ -7,7 +7,7 @@ type BtnProps = {
 
 export const RedButton = (props: BtnProps) => {
   return (
-      <TouchableOpacity style={styles.redButton}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.redButton} {...props}><Text style={styles.textButton}>{props.text}</Text></TouchableOpacity>
   )
 }
 

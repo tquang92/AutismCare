@@ -1,12 +1,18 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { SafeAreaView, StyleSheet, Text, View, Button } from "react-native";
+import React, { useState } from "react";
 import Header from "../../component/Header";
 import { STYLES } from "../../styles/styles";
 import { BlueButton } from "../../component/Button.Blue";
 import { useNavigation } from "@react-navigation/native";
 import { RedButton } from "../../component/ButtonRed";
+import NotificationBox, { NotificationBoxProps } from "../../component/NotificationBox";
 
 const BookHistory = () => {
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal = ()=>{
+    
+    setShowModal(prev=>!prev);
+  }
   const navigation = useNavigation<any>();
   return (
     <SafeAreaView style={styles.container}>
@@ -36,7 +42,7 @@ const BookHistory = () => {
           </View>
         </View>
         <View style={styles.content}>
-            <Text style={[STYLES.headline, {color:'white'}]}> Ngày sinh</Text>
+            <Text style={[STYLES.headline, {color:'white'}]}> Ngày sinh:</Text>
             <Text style={[STYLES.word, {color:'white'}]}>15/01/2003</Text>
         </View>
         <View style={styles.content}>
@@ -45,9 +51,15 @@ const BookHistory = () => {
         </View>
       </View>
       <View style={styles.button}>
-        <RedButton text="Huỷ"/>
-        <BlueButton  text="Gặp ngay" width={'50%'}/>
+        <RedButton text="Huỷ" onPress={toggleModal}/>
+        <BlueButton  text="Gặp ngay" width={50}/>
       </View>
+      <NotificationBox title="Thông báo" content="Bạn có chắc chắn muốn huỷ lịch hẹn?" showModal={showModal} BottomBox={()=>{
+        return <Button title="Xác nhận" onPress={toggleModal}/>
+      }} />
+      <NotificationBox title="Thông báo" content="Vui lòng nhận lý do hủy cuộc hẹn này" BottomBox={()=>{
+        return <Button title="Gửi"/>
+      } }/>
   </SafeAreaView>
   )
 }
@@ -64,7 +76,6 @@ const styles = StyleSheet.create({
     borderTopWidth:1, 
     borderColor: '#4B5563',
     flexDirection:'row',
-    margin:12,
     paddingVertical:12,
     height:49,
     alignItems:"center"
@@ -74,5 +85,8 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     padding:20,
   }, 
+  notification: {
+    borderTopWidth:1
+  }
   
 })

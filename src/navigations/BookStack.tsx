@@ -4,6 +4,7 @@ import { Stack } from "../data/items";
 import Chat from "../screens/Book/Chat";
 import BookHistory from "../screens/Book/BookHistory";
 import BookOverView from "../screens/Book/BookOverView";
+import Detail from "../screens/Book/Detail";
 
 const BookStack = () => {
   return (
@@ -12,7 +13,7 @@ const BookStack = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="BookHistory" component={BookHistory}></Stack.Screen>
+      <Stack.Screen name="BookHistory" component={BookOverView}></Stack.Screen>
       <Stack.Screen name="Chat" component={Chat}></Stack.Screen>
     </Stack.Navigator>
   );
