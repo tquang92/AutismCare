@@ -9,7 +9,7 @@ const bookingSlice = createSlice({
         addBooking: (state,actions: PayloadAction<string>) => {
             return actions.payload;
         },
-        cancelBookin: () => {
+        cancelBooking: () => {
             return "";
         }
     }
