@@ -46,7 +46,7 @@ const BookHistory = () => {
       </View>
       <View style={styles.button}>
         <RedButton text="Huỷ"/>
-        <BlueButton  text="Gặp ngay" width={'50%'}/>
+        <BlueButton  text="Gặp ngay" width={50}/>
       </View>
   </SafeAreaView>
   )
